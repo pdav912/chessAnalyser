@@ -207,10 +207,10 @@ app.post('/api/compute', (req, res) => {
                         //console.log(key)
                         //console.log(`player score ${playerResponseScore}, computer score ${computerResponseScore}`)
                         if ((Math.abs(playerResponseScore) - Math.abs(computerResponseScore) <= -2)){
-                            if (blunders[`move ${move}`]){
-                                blunders[`move ${move}`] = blunders[`move ${move}`] + 1
+                            if (blunders[move]){
+                                blunders[move] = blunders[move] + 1
                             }else{
-                                blunders[`move ${move}`] = 1
+                                blunders[move] = 1
                             }
                         }
                         move++
@@ -241,10 +241,10 @@ app.post('/api/compute', (req, res) => {
                         //console.log(key)
                         //console.log(`player score ${playerResponseScore}, computer score ${computerResponseScore}`)
                         if ((Math.abs(playerResponseScore/100) - Math.abs(computerResponseScore/100) <= -2)){
-                            if (blunders[`move ${move}`]){
-                                blunders[`move ${move}`] = blunders[`move ${move}`] + 1
+                            if (blunders[move]){
+                                blunders[move] = blunders[move] + 1
                             }else{
-                                blunders[`move ${move}`] = 1
+                                blunders[move] = 1
                             }
                         }
                         move++
